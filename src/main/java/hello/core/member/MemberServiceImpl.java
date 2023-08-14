@@ -13,7 +13,7 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository;
 
 
-    @Autowired // MemberRepository 타입에 맞는 스프링 빈을 주입  ac.getBean(MemberRepository.class)이랑 비슷
+    @Autowired //의존관계 자동 주입, MemberRepository 타입에 맞는 스프링 빈을 주입  ac.getBean(MemberRepository.class)이랑 비슷
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
