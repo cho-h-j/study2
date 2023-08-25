@@ -26,7 +26,6 @@ public class AllBeanTest {
         Assertions.assertThat(discountService).isInstanceOf(DiscountService.class);
         Assertions.assertThat(discountPrice).isEqualTo(1000);
 
-
         int rateDiscountPrice= discountService.discount(member, 20000,"rateDiscountPolicy");
         Assertions.assertThat(rateDiscountPrice).isEqualTo(2000);
     }
@@ -44,7 +43,7 @@ public class AllBeanTest {
             this.policyMap = policyMap;
             this.policies = policies;
             System.out.println("policyMap " + policyMap);
-            System.out.println("policies "  + policies);;
+
         }
 
         public  int discount(Member member, int price, String discountCode) {
